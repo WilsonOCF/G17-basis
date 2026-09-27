@@ -370,7 +370,9 @@ figure{
     margin-top: 16px;
 }
 footer {
-    display: flex;
+    /* Actividad D1 clase 4 */
+    display: grid;
+    grid-template-columns: 1fr;
     flex-wrap: wrap;
     align-items: flex-start; /* Actividad D2 */
     gap: 16px;
@@ -437,6 +439,10 @@ footer{grid-area: pie;}
     }
     .envio {
         grid-template-columns: 1fr 1fr;
+    }
+    /* Actividad D1 clase 4 */
+    footer {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 @media(min-width : 64em) {
