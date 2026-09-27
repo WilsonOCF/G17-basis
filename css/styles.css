@@ -415,8 +415,22 @@ footer{grid-area: pie;}
 #compra .envio textarea {
     flex-basis: 100%;
 }
-.campo-ancho { 
+.campo-ancho {
     grid-column: 1/-1;
+}
+
+/* Actividad D2 clase 4 */
+form {
+    display: grid;
+    grid-template: auto auto auto / 2fr 1fr;
+    gap: 16px;
+}
+.envio {
+    grid-row: 1 / 3;
+}
+button[type="submit"] {
+    grid-column: 1 / -1;
+    justify-self: start;
 }
 
 @media(min-width: 48em) {
