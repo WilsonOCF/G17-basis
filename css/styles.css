@@ -264,6 +264,28 @@ nav a {text-decoration: none; font-weight: 600;}
 .fila p {
     flex: 1;
 }
+
+/* Actividad D1 */
+.boton-carrito {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--marca);
+    color: var(--sobre-marca);
+    border-radius: 999px;
+    padding: 0.4em 0.9em;
+}
+.contador {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--sobre-marca);
+    color: var(--marca);
+    font-size: 0.8rem;
+}
 /* ATRIBUTO */
 button[type="submit"]{background-color: var(--exito); font-size: 1.125rem;}
 
