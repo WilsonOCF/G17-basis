@@ -110,8 +110,9 @@ body {
     padding: var(--espacio);
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: 
+    grid-template-areas:
         "cabecera"
+        "promo"
         "lateral"
         "contenido"
         "pie";
@@ -396,6 +397,8 @@ footer address{
     gap: 24px 16px;
 }
 header{grid-area: cabecera;}
+/* Actividad I1 clase 4 */
+.promo{grid-area: promo;}
 main{grid-area: contenido;}
 aside{grid-area: lateral; align-self: start;}
 footer{grid-area: pie;}
@@ -439,11 +442,12 @@ footer{grid-area: pie;}
 @media(min-width : 64em) {
     body {
         grid-template-columns: 300px minmax(0, 1fr);
-        grid-template-areas: 
+        grid-template-areas:
         "cabecera cabecera"
+        "promo promo"
         "lateral contenido"
         "pie pie";
-        grid-template-rows: auto 1fr auto;
+        grid-template-rows: auto auto 1fr auto;
     }
 }
 @media (min-width: 75em) {
