@@ -249,6 +249,12 @@ nav > ul {
 }
 
 nav a {text-decoration: none; font-weight: 600;}
+
+/* Actividad I1 */
+.categorias ul {
+    justify-content: center;
+    flex-wrap: wrap;
+}
 /* ATRIBUTO */
 button[type="submit"]{background-color: var(--exito); font-size: 1.125rem;}
 
