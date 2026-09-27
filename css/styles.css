@@ -422,10 +422,15 @@ footer{grid-area: pie;}
     }
     .productos {
         grid-auto-rows: 1fr;
+        grid-auto-flow: row dense; /* Actividad F clase 4 */
     }
     .destacado {
         grid-column: span 2;
         grid-row: span 2;
+    }
+    /* Actividad F clase 4 */
+    .ancha {
+        grid-column: span 2;
     }
     .envio {
         grid-template-columns: 1fr 1fr;
