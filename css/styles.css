@@ -286,6 +286,11 @@ nav a {text-decoration: none; font-weight: 600;}
     color: var(--marca);
     font-size: 0.8rem;
 }
+
+/* Actividad D2 */
+.columna {
+    flex: 1 1 200px;
+}
 /* ATRIBUTO */
 button[type="submit"]{background-color: var(--exito); font-size: 1.125rem;}
 
@@ -366,7 +371,7 @@ figure{
 footer {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start; /* Actividad D2 */
     gap: 16px;
     margin-top: 2rem;
     padding: 1.5rem 0;
