@@ -255,6 +255,15 @@ nav a {text-decoration: none; font-weight: 600;}
     justify-content: center;
     flex-wrap: wrap;
 }
+
+/* Actividad I2 */
+.fila {
+    display: flex;
+    gap: 16px;
+}
+.fila p {
+    flex: 1;
+}
 /* ATRIBUTO */
 button[type="submit"]{background-color: var(--exito); font-size: 1.125rem;}
 
