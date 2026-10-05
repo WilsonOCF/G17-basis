@@ -240,4 +240,9 @@ console.log(catalogoPresentable);
 const catalogoConStock = enStock.map(p => p.nombre + " (" + p.categoria + ") - " + formatearPrecio(p.precio));
 console.log(catalogoConStock);
 
+// Actividad I2 clase 7
+const cuantosHayDe = (categoria) => productos.filter(p => p.categoria === categoria).length;
+console.log(cuantosHayDe("laptops"));
+console.log(cuantosHayDe("televisores"));
+
 console.log("Fin del recorrido clase 07/08");
