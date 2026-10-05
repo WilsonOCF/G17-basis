@@ -126,6 +126,9 @@ productos.push(
     {id: 5, nombre: "Macbook Air 13", precio: 1299.99, categoria: "laptops", stock: 4, destacado: false},
     {id: 6, nombre: "Iphone 15", precio: 999.99, categoria: "smartphones", stock: 0, destacado: false}
 );
+
+// Actividad F clase 7
+productos.push({id: 7, nombre: "Ipad Air", precio: 599.99, categoria: "tablets", stock: 6, destacado: false});
 console.log(productos.length);
 console.log(productos[0].nombre);
 console.log(productos[productos.length-1].nombre);
