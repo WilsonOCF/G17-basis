@@ -232,4 +232,12 @@ if(!pedido) {
     console.error("No existe un producto con id 99");
 }
 
+// Actividad I1 clase 7
+const catalogoPresentable = productos.map(p => p.nombre + " (" + p.categoria + ") - " + formatearPrecio(p.precio));
+console.log(catalogoPresentable);
+
+// Actividad I1 clase 7
+const catalogoConStock = enStock.map(p => p.nombre + " (" + p.categoria + ") - " + formatearPrecio(p.precio));
+console.log(catalogoConStock);
+
 console.log("Fin del recorrido clase 07/08");
