@@ -262,4 +262,16 @@ const resumenCarrito = (items) => {
 console.log(resumenCarrito([]));
 console.log(resumenCarrito([productos[0], productos[1]]));
 
+// Actividad D2 clase 7
+const baratoConSort = productos.filter(p => p.stock > 0).slice().sort((a, b) => a.precio - b.precio)[0];
+console.log(baratoConSort.nombre);
+
+// Actividad D2 clase 7
+const conStock = productos.filter(p => p.stock > 0);
+const baratoConReduce = conStock.reduce((menor, p) => (p.precio < menor.precio ? p : menor), conStock[0]);
+console.log(baratoConReduce.nombre);
+
+// Actividad D2 clase 7
+// La de sort es mas clara: ordeno y tomo el primero.
+
 console.log("Fin del recorrido clase 07/08");
