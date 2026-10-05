@@ -245,4 +245,21 @@ const cuantosHayDe = (categoria) => productos.filter(p => p.categoria === catego
 console.log(cuantosHayDe("laptops"));
 console.log(cuantosHayDe("televisores"));
 
+// Actividad D1 clase 7
+const resumenCarrito = (items) => {
+    const cantidad = items.length;
+    const total = items.reduce((suma, p) => suma + p.precio, 0);
+    let envio;
+    if(total >= ENVIO_GRATIS_DESDE) {
+        envio = 0;
+    } else {
+        envio = 9.99;
+    }
+    return { cantidad, total, envio };
+}
+
+// Actividad D1 clase 7
+console.log(resumenCarrito([]));
+console.log(resumenCarrito([productos[0], productos[1]]));
+
 console.log("Fin del recorrido clase 07/08");
