@@ -25,6 +25,8 @@
       --color-texto:        #1d1d1f;
       --color-texto-suave:  #6e6e73;
       --color-borde:        #d2d2d7;
+      /* Actividad I1 clase 6 */
+      --color-oferta:       #d9480f;
 
       --radius-tarjeta: 12px;
 
@@ -54,6 +56,8 @@
         --color-texto:        #f5f5f7;
         --color-texto-suave:  #a1a1a6;
         --color-borde:        #3a3a3c;
+        /* Actividad I1 clase 6 */
+        --color-oferta:       #ff8a50;
       }
     }
 
@@ -125,6 +129,12 @@
         <h3 class="text-base leading-tight mb-1">Pago seguro</h3>
         <p class="text-sm text-texto-suave">Tarjeta, PayPal o contra entrega.</p>
       </article>
+      <!-- Actividad F clase 6 -->
+      <article class="tarjeta text-center">
+        <p class="text-3xl mb-1" aria-hidden="true">🔄</p>
+        <h3 class="text-base leading-tight mb-1">Devolución fácil</h3>
+        <p class="text-sm text-texto-suave">30 días para cambiar o devolver.</p>
+      </article>
     </section>
 
     <section id="catalogo">
@@ -173,11 +183,16 @@
           <button class="boton self-center mt-auto" type="button">Agregar al carrito</button>
         </article>
 
+        <!-- Actividad I1 clase 6 -->
         <article class="tarjeta group flex flex-col text-center
                         transition-[transform,box-shadow] duration-200
                         hover:-translate-y-1 hover:shadow-lg dark:hover:ring-1 dark:hover:ring-marca
                         animate-aparecer
-                        motion-reduce:transition-none motion-reduce:animate-none">
+                        motion-reduce:transition-none motion-reduce:animate-none
+                        before:content-['Oferta'] before:inline-block before:self-center
+                        before:text-oferta before:border before:border-oferta
+                        before:text-xs before:font-bold before:uppercase before:rounded-full
+                        before:px-2.5 before:py-0.5 before:mb-2">
           <figure class="mb-3">
             <img class="aspect-square object-contain dark:brightness-90"
                  src="https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/thumbnail.webp"
