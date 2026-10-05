@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
-<html lang="es">
+<!-- Actividad D2 clase 6 -->
+<html lang="es" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,22 +44,24 @@
       --container-ancha:  1280px;
     }
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --color-marca:        #3d9bff;
-        --color-sobre-marca:  #0b1220;
-        --color-exito:        #30d158;
-        --color-error:        #ff6b5e;
-        --color-fondo:        #111114;
-        --color-fondo-suave:  #2c2c2e;
-        --color-tarjeta:      #1d1d1f;
-        --color-resalte:      #0e2439;
-        --color-texto:        #f5f5f7;
-        --color-texto-suave:  #a1a1a6;
-        --color-borde:        #3a3a3c;
-        /* Actividad I1 clase 6 */
-        --color-oferta:       #ff8a50;
-      }
+    /* Actividad D2 clase 6 */
+    @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+    /* Actividad D2 clase 6 */
+    [data-theme="dark"] {
+      --color-marca:        #3d9bff;
+      --color-sobre-marca:  #0b1220;
+      --color-exito:        #30d158;
+      --color-error:        #ff6b5e;
+      --color-fondo:        #111114;
+      --color-fondo-suave:  #2c2c2e;
+      --color-tarjeta:      #1d1d1f;
+      --color-resalte:      #0e2439;
+      --color-texto:        #f5f5f7;
+      --color-texto-suave:  #a1a1a6;
+      --color-borde:        #3a3a3c;
+      /* Actividad I1 clase 6 */
+      --color-oferta:       #ff8a50;
     }
 
     @layer components {
@@ -171,10 +174,11 @@
           <button class="boton self-center mt-4" type="button">Agregar al carrito</button>
         </article>
 
+        <!-- Actividad D1 clase 6 -->
         <article class="tarjeta group flex flex-col text-center
                         transition-[transform,box-shadow] duration-200
                         hover:-translate-y-1 hover:shadow-lg dark:hover:ring-1 dark:hover:ring-marca
-                        animate-aparecer
+                        animate-aparecer [animation-delay:100ms]
                         motion-reduce:transition-none motion-reduce:animate-none">
           <figure class="mb-3">
             <img class="aspect-square object-contain dark:brightness-90"
@@ -189,10 +193,11 @@
         </article>
 
         <!-- Actividad I1 clase 6 -->
+        <!-- Actividad D1 clase 6 -->
         <article class="tarjeta group flex flex-col text-center
                         transition-[transform,box-shadow] duration-200
                         hover:-translate-y-1 hover:shadow-lg dark:hover:ring-1 dark:hover:ring-marca
-                        animate-aparecer
+                        animate-aparecer [animation-delay:200ms]
                         motion-reduce:transition-none motion-reduce:animate-none
                         before:content-['Oferta'] before:inline-block before:self-center
                         before:text-oferta before:border before:border-oferta
@@ -209,10 +214,11 @@
           <button class="boton self-center mt-auto" type="button">Agregar al carrito</button>
         </article>
 
+        <!-- Actividad D1 clase 6 -->
         <article class="tarjeta group flex flex-col text-center
                         transition-[transform,box-shadow] duration-200
                         hover:-translate-y-1 hover:shadow-lg dark:hover:ring-1 dark:hover:ring-marca
-                        animate-aparecer
+                        animate-aparecer [animation-delay:300ms]
                         motion-reduce:transition-none motion-reduce:animate-none">
           <figure class="mb-3">
             <img class="aspect-square object-contain dark:brightness-90"
