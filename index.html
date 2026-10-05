@@ -90,6 +90,11 @@
                after:content-[''] after:block after:w-12 after:h-[3px]
                after:bg-marca after:mt-1;
       }
+
+      /* Actividad I2 clase 6 */
+      .celda {
+        @apply border border-borde px-2 py-1.5;
+      }
     }
   </style>
 </head>
@@ -344,29 +349,31 @@
     <h3 class="text-lg leading-tight mt-4">Costos de envío</h3>
     <table class="w-full border-collapse text-sm">
       <caption class="font-semibold text-left mb-2">Tarifas por zona</caption>
+      <!-- Actividad I2 clase 6 -->
       <thead>
         <tr>
-          <th class="border border-borde px-2 py-1.5 text-left bg-fondo-suave">Zona</th>
-          <th class="border border-borde px-2 py-1.5 text-left bg-fondo-suave">Tiempo</th>
-          <th class="border border-borde px-2 py-1.5 text-left bg-fondo-suave">Costo</th>
+          <th class="celda text-left bg-fondo-suave">Zona</th>
+          <th class="celda text-left bg-fondo-suave">Tiempo</th>
+          <th class="celda text-left bg-fondo-suave">Costo</th>
         </tr>
       </thead>
+      <!-- Actividad I2 clase 6 -->
       <tbody>
 
         <tr class="even:bg-fondo hover:bg-resalte">
-          <td class="border border-borde px-2 py-1.5">Lima</td>
-          <td class="border border-borde px-2 py-1.5">24 horas</td>
-          <td class="border border-borde px-2 py-1.5">Gratis</td>
+          <td class="celda">Lima</td>
+          <td class="celda">24 horas</td>
+          <td class="celda">Gratis</td>
         </tr>
         <tr class="even:bg-fondo hover:bg-resalte">
-          <td class="border border-borde px-2 py-1.5">Resto del Perú</td>
-          <td class="border border-borde px-2 py-1.5">3 a 5 días</td>
-          <td class="border border-borde px-2 py-1.5">$9.90</td>
+          <td class="celda">Resto del Perú</td>
+          <td class="celda">3 a 5 días</td>
+          <td class="celda">$9.90</td>
         </tr>
         <tr class="even:bg-fondo hover:bg-resalte">
-          <td class="border border-borde px-2 py-1.5">Internacional</td>
-          <td class="border border-borde px-2 py-1.5">7 a 15 días</td>
-          <td class="border border-borde px-2 py-1.5">$29.90</td>
+          <td class="celda">Internacional</td>
+          <td class="celda">7 a 15 días</td>
+          <td class="celda">$29.90</td>
         </tr>
       </tbody>
     </table>
