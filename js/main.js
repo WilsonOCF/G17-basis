@@ -3,7 +3,8 @@ import { agregarAlCarrito, faltaParaEnvioGratis, guardarCarrito, leerCarrito, ol
 import {categorias, contarPorCategoria, productos} from "./datos.js";
 import formatearPrecio from "./formato.js";
 // Actividad F diapos clase 08
-import { ENVIO_GRATIS_DESDE, agregarProducto, precioConIgv } from "./tienda.js";
+// Actividad D2 diapos clase 08
+import { ENVIO_GRATIS_DESDE, agregarProducto, precioConIgv, actualizarPrecio, conDescuento } from "./tienda.js";
 import { filaCarrito, tarjetaProducto, esqueletoTarjeta, avisoCatalogo, avisoError } from "./ui.js";
 import { obtenerProductos } from "./api.js";
 const resumenCabecera = document.querySelector('#resumen-carrito');
@@ -196,3 +197,15 @@ const agruparPorCategoria = (items) =>
 
 // Actividad D1 diapos clase 08
 console.log(agruparPorCategoria(productos));
+
+// Actividad D2 diapos clase 08
+const aplicarDescuentoA = (items, categoria, porcentaje = 10) =>
+    items.map((producto) =>
+        producto.categoria === categoria
+            ? actualizarPrecio(producto, conDescuento(producto.precio, porcentaje))
+            : producto
+    );
+
+// Actividad D2 diapos clase 08
+const rebajados = aplicarDescuentoA(productos, "laptops");
+console.log(productos.map((producto, i) => producto === rebajados[i]));
