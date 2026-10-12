@@ -182,6 +182,29 @@ formularioCompra.addEventListener("submit", (evento) => {
     formularioCompra.reset();
 
 })
+// Actividad D1 diapos clase 09
+const botonTema = document.querySelector('#boton-tema');
+const CLAVE_TEMA = "techcart_tema";
+
+// Actividad D1 diapos clase 09
+try {
+    if (localStorage.getItem(CLAVE_TEMA) === "oscuro") {
+        document.documentElement.classList.add("dark");
+    }
+} catch (error) {
+    console.warn("No se pudo leer el tema guardado:", error.message);
+}
+
+// Actividad D1 diapos clase 09
+botonTema.addEventListener('click', () => {
+    const oscuro = document.documentElement.classList.toggle("dark");
+    try {
+        localStorage.setItem(CLAVE_TEMA, oscuro ? "oscuro" : "claro");
+    } catch (error) {
+        console.warn("No se pudo guardar el tema:", error.message);
+    }
+});
+
 pintarCarrito();
 cargarCatalogo();
 

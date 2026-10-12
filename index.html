@@ -41,20 +41,22 @@
       --container-ancha:  1280px;
     }
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --color-marca:        #3d9bff;
-        --color-sobre-marca:  #0b1220;
-        --color-exito:        #30d158;
-        --color-error:        #ff6b5e;
-        --color-fondo:        #111114;
-        --color-fondo-suave:  #2c2c2e;
-        --color-tarjeta:      #1d1d1f;
-        --color-resalte:      #0e2439;
-        --color-texto:        #f5f5f7;
-        --color-texto-suave:  #a1a1a6;
-        --color-borde:        #3a3a3c;
-      }
+    /* Actividad D1 diapos clase 09 */
+    @custom-variant dark (&:where(.dark, .dark *));
+
+    /* Actividad D1 diapos clase 09 */
+    :root.dark {
+      --color-marca:        #3d9bff;
+      --color-sobre-marca:  #0b1220;
+      --color-exito:        #30d158;
+      --color-error:        #ff6b5e;
+      --color-fondo:        #111114;
+      --color-fondo-suave:  #2c2c2e;
+      --color-tarjeta:      #1d1d1f;
+      --color-resalte:      #0e2439;
+      --color-texto:        #f5f5f7;
+      --color-texto-suave:  #a1a1a6;
+      --color-borde:        #3a3a3c;
     }
 
     @layer components {
@@ -104,6 +106,8 @@
         <li><a class="text-marca font-semibold no-underline hover:underline" href="#compra">Comprar</a></li>
       </ul>
     </nav>
+    <!-- Actividad D1 diapos clase 09 -->
+    <button id="boton-tema" class="boton" type="button">Cambiar tema</button>
     <p id="resumen-carrito" class="font-semibold m-0" role="status" aria-live="polite"></p>
   </header>
 
