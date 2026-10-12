@@ -29,6 +29,17 @@ const mensajeDeError = (error) => {
     return error.message;
 }
 const pintarCatalogo = (lista = catalogo) => {
+    // Actividad I2 diapos clase 09
+    document.querySelector("#sin-resultados")?.remove();
+
+    // Actividad I2 diapos clase 09
+    if (lista.length === 0) {
+        const aviso = document.createElement("p");
+        aviso.id = "sin-resultados";
+        aviso.textContent = "Sin resultados: no hay productos en esta categoría.";
+        document.querySelector("#catalogo").append(aviso);
+    }
+
     const html = lista.map(tarjetaProducto).join("");
     grillaCatalogo.innerHTML="";
     grillaCatalogo.insertAdjacentHTML("beforeEnd", html);
