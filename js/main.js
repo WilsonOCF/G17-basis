@@ -186,3 +186,13 @@ Envío: ${zona} en ${dias} día(s)`;
 
 // Actividad I2 diapos clase 08
 console.log(productos.map(fichaCorta));
+
+// Actividad D1 diapos clase 08
+const agruparPorCategoria = (items) =>
+    items.reduce((grupos, producto) => ({
+        ...grupos,
+        [producto.categoria]: [...(grupos[producto.categoria] ?? []), producto]
+    }), {});
+
+// Actividad D1 diapos clase 08
+console.log(agruparPorCategoria(productos));
