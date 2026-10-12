@@ -4,12 +4,22 @@ import {IGV, ENVIO_GRATIS_DESDE, sumar} from "./tienda.js";
 import { costoDeEnvio } from "./envio.js";
 export const CLAVE_CARRITO = "techcart_carrito";
 
-export const agregarAlCarrito = (carrito, producto) => [...carrito, producto];
-export const quitarDelCarrito = (carrito, posicion) => carrito.filter((producto, i) => i !== posicion);
+// Actividad D2 diapos clase 09
+export const agregarAlCarrito = (carrito, producto) => {
+    const yaEsta = carrito.find((item) => item.id === producto.id);
+    if (yaEsta) {
+        return carrito.map((item) => item.id === producto.id ? {...item, cantidad: item.cantidad + 1} : item);
+    }
+    return [...carrito, {...producto, cantidad: 1}];
+};
+// Actividad D2 diapos clase 09
+export const quitarDelCarrito = (carrito, id) => carrito.filter((producto) => producto.id !== id);
 
 export const resumenCarrito = (carrito) => {
-    const unidades = carrito.length;
-    const subTotal = sumar(...carrito.map(({precio}) => precio)); // 100
+    // Actividad D2 diapos clase 09
+    const unidades = sumar(...carrito.map(({cantidad}) => cantidad));
+    // Actividad D2 diapos clase 09
+    const subTotal = sumar(...carrito.map(({precio, cantidad}) => precio * cantidad)); // 100
     const igv = subTotal * IGV; // 100 * 0.18 = 18 soles
     const envio = unidades === 0 ? 0 : costoDeEnvio(subTotal); // 9.90
     return {unidades, subTotal, igv, envio,  total : subTotal + igv + envio}; // 127.90

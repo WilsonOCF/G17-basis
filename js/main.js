@@ -132,7 +132,8 @@ listaCarrito.addEventListener('click', (evento) => {
     const boton = evento.target.closest("button[data-accion='quitar']");
     if(!boton) return;
 
-    carrito = quitarDelCarrito(carrito, Number(boton.dataset.posicion));
+    // Actividad D2 diapos clase 09
+    carrito = quitarDelCarrito(carrito, Number(boton.dataset.id));
     guardarCarrito(carrito);
     pintarCarrito();
 });
