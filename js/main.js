@@ -17,6 +17,8 @@ const grillaCatalogo = document.querySelector("#catalogo-grid");
 const estadoCatalogo = document.querySelector("#estado-catalogo");
 
 let catalogo = [];
+// Actividad I1 diapos clase 09
+const filtros = document.querySelector('#filtros');
 const mensajeDeError = (error) => {
     if(error.name === "TypeError") {
         return ("No pudimos conectarnos con la tienda. Revisa tu conexion y vuelve a intentarlo.");
@@ -103,6 +105,16 @@ grillaCatalogo.addEventListener('click', (evento) => {
     carrito = agregarAlCarrito(carrito , producto);
     guardarCarrito(carrito);
     pintarCarrito();
+});
+
+// Actividad I1 diapos clase 09
+filtros.addEventListener('click', (evento) => {
+    const boton = evento.target.closest("button[data-categoria]");
+    if (!boton) return;
+
+    const categoria = boton.dataset.categoria;
+    const lista = categoria === "todas" ? catalogo : catalogo.filter((p) => p.categoria === categoria);
+    pintarCatalogo(lista);
 });
 
 listaCarrito.addEventListener('click', (evento) => {
