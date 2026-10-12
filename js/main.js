@@ -77,6 +77,8 @@ let carrito = leerCarrito();
 
 const pintarCarrito = () => {
     const {unidades, subTotal, igv, envio, total}= resumenCarrito(carrito);
+    // Actividad F diapos clase 09
+    document.title = `(${unidades}) TechCart — Tienda de electrónica`;
     resumenCabecera.textContent = unidades === 0 ? "Carrito vacio" : `${unidades} producto(s) - ${formatearPrecio(total)}`;
     listaCarrito.innerHTML = carrito.map(filaCarrito).join("");
     totalCarrito.textContent = unidades === 0 ? "Todavia no agregaste nada." : 
