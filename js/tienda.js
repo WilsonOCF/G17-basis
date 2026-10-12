@@ -3,18 +3,7 @@ export const ENVIO_GRATIS_DESDE = 5000;
 
 export const precioConIgv = (precio) => precio * (1 + IGV);
 
-export function tarifaPorZona(zona) {
-    switch(zona) {
-        case "Lima" : 
-            return 0;
-        case "Resto del Peru":
-            return 9.99;
-        case "Internacional":
-            return 29.9
-        default : 
-            return 9.99;
-    }
-}
+// Actividad I1 diapos clase 08: tarifaPorZona se movio a envio.js
 
 export const buscar = (items, texto) => items.filter(({nombre}) => nombre.toLowerCase().includes(texto.toLowerCase()));
 export const masCaro = (items) => items.reduce((mayor, p) => (p.precio > mayor.precio ? p : mayor), items[0]);
@@ -23,7 +12,7 @@ export const sumar = (...precios) => precios.reduce((suma, n) => suma + n, 0);
 export const actualizarPrecio = (producto, precio) => ({...producto, precio});
 
 export const conDescuento = (precio, porcentaje = 10) => precio - precio * (porcentaje / 100);
-export const costoDeEnvio = (total, zona = "Resto del Peru") => total >= ENVIO_GRATIS_DESDE ? 0 : tarifaPorZona(zona);
+// Actividad I1 diapos clase 08: costoDeEnvio se movio a envio.js
 
 export const resumenTienda = (items) => {
     const disponibles = items.filter(({stock}) => stock > 0);

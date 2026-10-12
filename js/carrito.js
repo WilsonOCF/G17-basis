@@ -1,4 +1,7 @@
-import {IGV, ENVIO_GRATIS_DESDE, costoDeEnvio, sumar} from "./tienda.js";
+// Actividad I1 diapos clase 08
+import {IGV, ENVIO_GRATIS_DESDE, sumar} from "./tienda.js";
+// Actividad I1 diapos clase 08
+import { costoDeEnvio } from "./envio.js";
 export const CLAVE_CARRITO = "techcart_carrito";
 
 export const agregarAlCarrito = (carrito, producto) => [...carrito, producto];

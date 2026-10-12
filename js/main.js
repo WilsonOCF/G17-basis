@@ -1,7 +1,9 @@
 import { agregarAlCarrito, faltaParaEnvioGratis, guardarCarrito, leerCarrito, olvidarCarrito, quitarDelCarrito, resumenCarrito } from "./carrito.js";
-import {categorias, contarPorCategoria} from "./datos.js";
+// Actividad F diapos clase 08
+import {categorias, contarPorCategoria, productos} from "./datos.js";
 import formatearPrecio from "./formato.js";
-import { ENVIO_GRATIS_DESDE } from "./tienda.js";
+// Actividad F diapos clase 08
+import { ENVIO_GRATIS_DESDE, agregarProducto, precioConIgv } from "./tienda.js";
 import { filaCarrito, tarjetaProducto, esqueletoTarjeta, avisoCatalogo, avisoError } from "./ui.js";
 import { obtenerProductos } from "./api.js";
 const resumenCabecera = document.querySelector('#resumen-carrito');
@@ -156,3 +158,31 @@ formularioCompra.addEventListener("submit", (evento) => {
 })
 pintarCarrito();
 cargarCatalogo();
+
+// Actividad F diapos clase 08
+const nuevo = { id: 7, nombre: "Galaxy Tab S9", marca: "Samsung", precio: 799.99, categoria: "tablets", stock: 6, destacado: false };
+
+// Actividad F diapos clase 08
+const nuevaLista = agregarProducto(productos, nuevo);
+
+// Actividad F diapos clase 08
+const ficha = `
+    Producto : ${nuevo.nombre}
+    Categoría: ${nuevo.categoria}
+    Precio : ${formatearPrecio(nuevo.precio)}
+    Con IGV : ${formatearPrecio(precioConIgv(nuevo.precio))}
+    Stock : ${nuevo.stock} unidades
+`;
+console.log(ficha);
+
+// Actividad F diapos clase 08
+console.log(nuevaLista.length, productos.length);
+
+// Actividad I2 diapos clase 08
+const fichaCorta = ({ nombre, precio, envio: { zona, dias } }) => `
+Producto: ${nombre}
+Precio: ${formatearPrecio(precio)}
+Envío: ${zona} en ${dias} día(s)`;
+
+// Actividad I2 diapos clase 08
+console.log(productos.map(fichaCorta));
